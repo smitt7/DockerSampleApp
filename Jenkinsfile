@@ -1,6 +1,12 @@
 pipeline {
     agent any
  stages {
+     stage('Checkout') {
+            steps {
+                git 'https://github.com/smitt7/DockerSampleApp.git'
+                
+            }
+        }
   stage('Docker Build and Tag') {
            steps {
               
